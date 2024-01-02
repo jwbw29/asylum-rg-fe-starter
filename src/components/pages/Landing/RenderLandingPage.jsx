@@ -51,7 +51,7 @@ function RenderLandingPage(props) {
           <Button
             type="default"
             style={{ backgroundColor: '#404C4A', color: '#FFFFFF' }}
-            onClick={() => history.push('/graphs')}
+            // [ ] change this to download: onClick={() => history.push('/graphs')}
           >
             Download the Data
           </Button>
