@@ -1,6 +1,6 @@
 ## Description
 
-___Add your PR description here, deleting this example___
+Added the graph section at the top of the landing page and also added the stats section at the bottom of the page inside the `RenderLandingPage.jsx` component.Added additional styling inside `RenderLandingPage.less` that helped align the items within their container.
 
 #### Video Link
 
@@ -8,7 +8,7 @@ ___Add your PR description here, deleting this example___
 
 #### Jira Link
 
-___Paste your jira ticket link here, deleting this example___
+[Trello Link](https://trello.com/b/vqdc1glO/bt-labs)
 
 (Example below):
 
@@ -16,19 +16,19 @@ https://bloomtechlabs.atlassian.net/browse/BL-637
 
 ## Type of change
 
-___Please delete options that are not relevant.___
+**_Please delete options that are not relevant._**
 
 - [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
+- [x] New feature (non-breaking change which adds functionality)
 - [ ] This change requires a documentation update
 
 ## Checklist:
 
-- [ ] My code follows the style guidelines of this project
+- [x] My code follows the style guidelines of this project
 - [ ] I have performed a self-review of my own code
 - [ ] I have removed unnecessary comments/console logs from my code
-- [ ] My changes generate no new warnings
+- [x] My changes generate no new warnings
 - [ ] I have checked my code and corrected any misspellings
-- [ ] No duplicate code left within changed files
-- [ ] Size of pull request kept to a minimum
+- [x] No duplicate code left within changed files
+- [x] Size of pull request kept to a minimum
 - [ ] Pull request description clearly describes changes made & motivations for said changes
