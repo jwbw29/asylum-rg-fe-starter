@@ -4,7 +4,7 @@ Added the graph section at the top of the landing page and also added the stats 
 
 #### Video Link
 
-[Loom Video]()
+[Loom Video](https://www.loom.com/share/3bdc7e7aa47c42298645163928d7ff4c?sid=9bd482b2-a27b-49b2-a1c0-dc4b3226b3ca)
 
 #### Jira Link
 
