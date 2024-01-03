@@ -4,7 +4,8 @@ Added the graph section at the top of the landing page and also added the stats 
 
 #### Video Link
 
-[Loom Video](Add your loom video link here)
+[Loom Video pt1](https://www.loom.com/share/fe24d73d3b3a4da1a0f14d0938eb1bdc?sid=154c0bde-e24d-4f90-9299-5c6d43f262a5)
+[Loom Video pt2](Adhttps://www.loom.com/share/c99b68b82bae444a9ef5a7141336789e?sid=7cf6e467-43ea-4d41-8f7b-0f2108a7dec3)
 
 #### Jira Link
 
@@ -25,10 +26,10 @@ https://bloomtechlabs.atlassian.net/browse/BL-637
 ## Checklist:
 
 - [x] My code follows the style guidelines of this project
-- [ ] I have performed a self-review of my own code
-- [ ] I have removed unnecessary comments/console logs from my code
+- [x] I have performed a self-review of my own code
+- [x] I have removed unnecessary comments/console logs from my code
 - [x] My changes generate no new warnings
-- [ ] I have checked my code and corrected any misspellings
+- [x] I have checked my code and corrected any misspellings
 - [x] No duplicate code left within changed files
 - [x] Size of pull request kept to a minimum
-- [ ] Pull request description clearly describes changes made & motivations for said changes
+- [x] Pull request description clearly describes changes made & motivations for said changes
