@@ -5,18 +5,23 @@ To begin work on this ticket, make sure you have finished:
 1. Getting locally setup.
 2. Completed the `Onboarding Module` in your course.
 3. Completed Build Sprint 1.
+   To begin work on this ticket, make sure you have finished:
+
+4. Getting locally setup.
+5. Completed the `Onboarding Module` in your course.
+6. Completed Build Sprint 1.
 
 ### Objective
 
 Deliver the following:
 
-- TODO Integrate this frontend application with an API.
-- TODO Rework the `GraphWrapper.jsx` file and data visualizations to use an API instead of `test_data.json`.
-- TODO The graphs on the Graphs page should display after the integration.
+- [ ] Integrate this frontend application with an API.
+- [ ] Rework the `GraphWrapper.jsx` file and data visualizations to use an API instead of `test_data.json`.
+- [ ] The graphs on the Graphs page should display after the integration.
 
 ### Relevant Files
 
-TODO You must inspect the code in `src/components/pages/DataVisualizations`, `src/data`, and `src/state` to ensure that the application is pulling data from an API and not the dummy data file. Specifically, focus on `GraphWrapper.jsx`.
+[ ] You must inspect the code in `src/components/pages/DataVisualizations`, `src/data`, and `src/state` to ensure that the application is pulling data from an API and not the dummy data file. Specifically, focus on `GraphWrapper.jsx`.
 
 ### Guidance
 
