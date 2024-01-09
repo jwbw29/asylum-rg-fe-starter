@@ -15,13 +15,13 @@ To begin work on this ticket, make sure you have finished:
 
 Deliver the following:
 
-- [ ] Integrate this frontend application with an API.
-- [ ] Rework the `GraphWrapper.jsx` file and data visualizations to use an API instead of `test_data.json`.
-- [ ] The graphs on the Graphs page should display after the integration.
+- [x] Integrate this frontend application with an API.
+- [x] Rework the `GraphWrapper.jsx` file and data visualizations to use an API instead of `test_data.json`.
+- [x] The graphs on the Graphs page should display after the integration.
 
 ### Relevant Files
 
-[ ] You must inspect the code in `src/components/pages/DataVisualizations`, `src/data`, and `src/state` to ensure that the application is pulling data from an API and not the dummy data file. Specifically, focus on `GraphWrapper.jsx`.
+[x] You must inspect the code in `src/components/pages/DataVisualizations`, `src/data`, and `src/state` to ensure that the application is pulling data from an API and not the dummy data file. Specifically, focus on `GraphWrapper.jsx`.
 
 ### Guidance
 
