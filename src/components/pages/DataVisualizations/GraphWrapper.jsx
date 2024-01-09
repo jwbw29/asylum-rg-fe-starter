@@ -78,7 +78,6 @@ function GraphWrapper(props) {
       axios
         .get(process.env.REACT_APP_API_URI, {
           // [ ] mock URL, can be simply replaced by `${Real_Production_URL}/summary` in prod!
-          // TODO mock URL, can be simply replaced by `${Real_Production_URL}/summary` in prod!
           params: {
             from: years[0],
             to: years[1],
@@ -86,7 +85,6 @@ function GraphWrapper(props) {
         })
         .then(result => {
           stateSettingCallback(view, office, test_data); // [ ] <-- `test_data` here can be simply replaced by `result.data` in prod!
-          stateSettingCallback(view, office, test_data); // TODO <-- `test_data` here can be simply replaced by `result.data` in prod!
         })
         .catch(err => {
           console.error(err);
@@ -95,7 +93,6 @@ function GraphWrapper(props) {
       axios
         .get(process.env.REACT_APP_API_URI, {
           // [ ] mock URL, can be simply replaced by `${Real_Production_URL}/summary` in prod!
-          // TODO mock URL, can be simply replaced by `${Real_Production_URL}/summary` in prod!
           params: {
             from: years[0],
             to: years[1],
@@ -104,7 +101,6 @@ function GraphWrapper(props) {
         })
         .then(result => {
           stateSettingCallback(view, office, test_data); // [ ] <-- `test_data` here can be simply replaced by `result.data` in prod!
-          stateSettingCallback(view, office, test_data); // TODO <-- `test_data` here can be simply replaced by `result.data` in prod!
         })
         .catch(err => {
           console.error(err);
