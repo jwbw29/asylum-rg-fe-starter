@@ -13,12 +13,12 @@ import { resetVisualizationQuery } from '../../../state/actionCreators';
 // import test_data from '../../../data/test_data.json';
 import { colors } from '../../../styles/data_vis_colors';
 import ScrollToTopOnMount from '../../../utils/scrollToTopOnMount';
-import dotenv from 'dotenv';
+// import dotenv from 'dotenv';
 
-dotenv.config();
+// dotenv.config();
 
 const { background_color } = colors;
-const URL = process.env.API_BASE_URL;
+const URL = 'https://hrf-asylum-be-b.herokuapp.com/cases';
 
 function GraphWrapper(props) {
   const { set_view, dispatch } = props;
@@ -54,7 +54,12 @@ function GraphWrapper(props) {
         break;
     }
   }
-  function updateStateWithNewData(years, view, office, stateSettingCallback) {
+  async function updateStateWithNewData(
+    years,
+    view,
+    office,
+    stateSettingCallback
+  ) {
     /*
           _                                                                             _
         |                                                                                 |
@@ -78,37 +83,45 @@ function GraphWrapper(props) {
     */
 
     if (office === 'all' || !office) {
-      axios
-        .get(`${URL}/summary`, {
-          // [ ] mock URL, can be simply replaced by `${Real_Production_URL}/summary` in prod!
-          params: {
-            from: years[0],
-            to: years[1],
-          },
-        })
-        .then(result => {
-          console.log(result.data);
-          stateSettingCallback(view, office, result.data); // [ ] <-- `test_data` here can be simply replaced by `result.data` in prod!
-        })
-        .catch(err => {
-          console.error(err);
-        });
+      const fiscal = await axios.get(`${URL}/fiscalSummary`, {
+        // mock URL, can be simply replaced by `${Real_Production_URL}/summary` in prod!
+        params: {
+          from: years[0],
+          to: years[1],
+        },
+      });
+
+      const citizenship = await axios.get(`${URL}/citizenshipSummary`, {
+        // mock URL, can be simply replaced by `${Real_Production_URL}/summary` in prod!
+        params: {
+          from: years[0],
+          to: years[1],
+        },
+      });
+
+      fiscal.data.citizenshipResults = citizenship.data;
+
+      stateSettingCallback(view, office, [fiscal.data]); // <-- `test_data` here can be simply replaced by `result.data` in prod!
     } else {
-      axios
-        .get(`${URL}/summary`, {
-          // [ ] mock URL, can be simply replaced by `${Real_Production_URL}/summary` in prod!
-          params: {
-            from: years[0],
-            to: years[1],
-            office: office,
-          },
-        })
-        .then(result => {
-          stateSettingCallback(view, office, result.data); // [ ] <-- `test_data` here can be simply replaced by `result.data` in prod!
-        })
-        .catch(err => {
-          console.error(err);
-        });
+      const fiscal = await axios.get(`${URL}/fiscalSummary`, {
+        params: {
+          from: years[0],
+          to: years[1],
+          office: office,
+        },
+      });
+
+      const citizenship = await axios.get(`${URL}/citizenshipSummary`, {
+        params: {
+          from: years[0],
+          to: years[1],
+          office: office,
+        },
+      });
+
+      fiscal.data.citizenshipResults = citizenship.data;
+
+      stateSettingCallback(view, office, [fiscal.data]); // <-- `test_data` here can be simply replaced by `result.data` in prod!
     }
   }
   const clearQuery = (view, office) => {
