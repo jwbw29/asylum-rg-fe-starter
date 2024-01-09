@@ -10,12 +10,15 @@ import YearLimitsSelect from './YearLimitsSelect';
 import ViewSelect from './ViewSelect';
 import axios from 'axios';
 import { resetVisualizationQuery } from '../../../state/actionCreators';
-import test_data from '../../../data/test_data.json';
+// import test_data from '../../../data/test_data.json';
 import { colors } from '../../../styles/data_vis_colors';
 import ScrollToTopOnMount from '../../../utils/scrollToTopOnMount';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const { background_color } = colors;
-const URL = 'https://hrf-asylum-be-b.herokuapp.com/cases';
+const URL = process.env.API_BASE_URL;
 
 function GraphWrapper(props) {
   const { set_view, dispatch } = props;
