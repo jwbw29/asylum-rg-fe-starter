@@ -99,6 +99,7 @@ function GraphWrapper(props) {
         },
       });
 
+      // create a new property on the `fiscal.data` object called `citizenshipResults` and set it equal to the `citizenship.data` object
       fiscal.data.citizenshipResults = citizenship.data;
 
       stateSettingCallback(view, office, [fiscal.data]); // <-- `test_data` here can be simply replaced by `result.data` in prod!
