@@ -41,14 +41,60 @@
   font-size: 1.2rem;
 }
 
-// [ ] .graphs-section {
-//  ADD THIS BACK IN WHEN YOU HAVE THE GRAPHS SECTION
-// }
+// ADD THIS BACK IN WHEN YOU HAVE THE GRAPHS SECTION
+.graphs-section {
+  display: flex;
+  justify-content: space-evenly; //or space-around
+  align-items: baseline;
+  margin-bottom: 3%;
+}
+
+#office-img {
+  height: 162px;
+  width: 315px;
+  margin-bottom: 30px;
+}
+
+#nationality-img {
+  height: 162px;
+  width: 190px;
+  margin-bottom: 30px;
+}
+#time-img {
+  height: 162px;
+  width: 315px;
+  margin-bottom: 30px;
+}
+
+.office {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nationality {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.over-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+}
 
 .view-more-data-btn-container {
-  height: 44px;
-  width: 180px;
-  margin: 0 auto;
+  margin-right: 20px;
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+.download-data-btn-container {
+  margin-left: 20px;
   text-align: center;
   margin-bottom: 10%;
 }
@@ -75,12 +121,47 @@
   font-size: 1.4rem;
 }
 
-// [ ] .bottom-section {
-//      ADD THIS BACK IN WHEN YOU HAVE A BOTTOM SECTION
-// }
+.bottom-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.bottom-section h2 {
+  font-family: 'moneta';
+  font-size: 2.5rem;
+  margin-bottom: 5%;
+}
+
+.stats-container {
+  font-family: 'acumin';
+  font-size: 2rem;
+
+  display: flex;
+  justify-content: space-evenly; //or space-around
+  align-items: baseline;
+  margin-bottom: 5%;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+}
+
+.stats p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.read-more-btn-container {
+  text-align: center;
+}
 
 .back-to-top {
-  width: 8%;
+  width: fit-content;
   font-size: 1.2rem;
   cursor: pointer;
   color: black;
