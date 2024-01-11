@@ -17,7 +17,7 @@ Deliver the following:
 
 ### Relevant Guides
 
-[ ] READ: The following guide from Auth0 will show you how to proceed from start to finish: `https://auth0.com/blog/complete-guide-to-react-user-authentication/`.
+[ ] READ: The following guide from Auth0 will show you how to proceed from start to finish: https://auth0.com/blog/complete-guide-to-react-user-authentication/.
 
 ### Guidance
 
