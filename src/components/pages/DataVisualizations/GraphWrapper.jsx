@@ -15,7 +15,7 @@ import { colors } from '../../../styles/data_vis_colors';
 import ScrollToTopOnMount from '../../../utils/scrollToTopOnMount';
 // import dotenv from 'dotenv';
 
-// dotenv.config();
+// [ ] dotenv.config();
 
 const { background_color } = colors;
 const URL = 'https://hrf-asylum-be-b.herokuapp.com/cases';
