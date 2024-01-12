@@ -21,11 +21,18 @@ Deliver the following:
 
 ### Guidance
 
-Many companies use third-party microservices to establish auth in their application. Your job is establish authentication for this application using the popular auth service: Auth0.
+Many companies use third-party microservices to establish auth in their application. Your job is to establish authentication for this application using the popular auth service: Auth0.
 
 - [ ] You can create a free account with Auth0 for this task.
 - After ensuring the login/logout flow works, you will
   - [ ] create a profile page that displays user info using the `useAuth0()` hook and dynamically displays based on the logged in user.
+  - {
+    "sub": "github|71021894",
+    "nickname": "jwbw29",
+    "name": "Justin Byrd",
+    "picture": "https://avatars.githubusercontent.com/u/71021894?v=4",
+    "updated_at": "2024-01-12T22:22:06.916Z"
+    }
 
 You must:
 
