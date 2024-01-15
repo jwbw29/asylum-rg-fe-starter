@@ -40,7 +40,6 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// TODO need to put AuthRouter here somewhere
 export function App() {
   const { Footer, Header } = Layout;
   return (
