@@ -48,12 +48,21 @@
 //   height: 100%;
 // }
 
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  height: fit-content;
+}
+
 .login-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
-  margin: 0 auto;
+  width: 30%;
+  height: 100%;
+  margin: 50px auto;
   padding: 0 2%;
 }
 
@@ -71,6 +80,22 @@ form {
   width: 100%;
   margin: 0 auto;
   padding: 0 2%;
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+}
+
+.password {
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+}
+
+.login-button {
+  width: 50%;
 }
 
 @media @mobile-small {
