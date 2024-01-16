@@ -1,5 +1,5 @@
 import React from 'react';
-import LoginButton from '../../common/login-button';
+import LoginButton from '../../common/LoginButton';
 import '../../../styles/LoginPage.less';
 
 const LoginPage = () => {

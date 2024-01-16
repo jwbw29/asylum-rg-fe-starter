@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../../styles/Images/WhiteLogo.png';
 import { colors } from '../../styles/data_vis_colors';
 // import AuthNav from '../auth-nav';
-import AuthenticationButton from '../common/authentication-button';
+import AuthenticationButton from '../common/AuthenticationButton';
 
 const { primary_accent_color } = colors;
 
