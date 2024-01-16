@@ -18,7 +18,7 @@ const LoginPage = () => {
             <label htmlFor="password">Password</label>
             <input type="password" id="password" />
           </div>
-          <LoginButton className="login-button" />
+          <LoginButton />
         </form>
       </div>
     </div>
