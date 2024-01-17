@@ -11,6 +11,7 @@ import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
 import 'antd/dist/antd.less';
 import { NotFoundPage } from './components/pages/NotFound';
 import { LandingPage } from './components/pages/Landing';
+import LoadingPage from './components/common/LoadingPage';
 
 import { FooterContent, SubFooter } from './components/Layout/Footer';
 import { HeaderContent } from './components/Layout/Header';
@@ -71,7 +72,7 @@ export function App() {
         <HeaderContent />
       </Header>
       {error && <div>Oops... {error.message}</div>}
-      {!error && isLoading && <div>Loading...</div>}
+      {!error && isLoading && <LoadingPage />}
       {!error && !isLoading && (
         <Switch>
           <Route path="/" exact component={LandingPage} />
