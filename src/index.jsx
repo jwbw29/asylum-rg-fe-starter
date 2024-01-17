@@ -6,7 +6,7 @@ import {
   // useHistory,
   Switch,
 } from 'react-router-dom';
-import Auth0ProviderWithHistory from './auth/auth0-provider-with-history';
+import { Auth0Provider } from '@auth0/auth0-react';
 
 import 'antd/dist/antd.less';
 import { NotFoundPage } from './components/pages/NotFound';
@@ -27,16 +27,22 @@ import LoginPage from './components/pages/Login/LoginPage';
 import ProfilePage from './components/pages/Profile/ProfilePage';
 
 const { primary_accent_color } = colors;
+const domain = process.env.REACT_APP_AUTH0_DOMAIN;
+const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
 
 const store = configureStore({ reducer: reducer });
 ReactDOM.render(
   <Router>
     <Provider store={store}>
-      <Auth0ProviderWithHistory>
+      <Auth0Provider
+        domain={domain}
+        clientId={clientId}
+        redirectUri={window.location.origin}
+      >
         <React.StrictMode>
           <App />
         </React.StrictMode>{' '}
-      </Auth0ProviderWithHistory>{' '}
+      </Auth0Provider>{' '}
     </Provider>
   </Router>,
   document.getElementById('root')
