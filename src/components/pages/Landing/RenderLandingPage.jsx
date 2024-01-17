@@ -7,7 +7,7 @@ import HrfPhoto from '../../../styles/Images/paper-stack.jpg';
 import '../../../styles/RenderLandingPage.less';
 import { Button } from 'antd';
 import { useHistory } from 'react-router-dom';
-// [ ] for the purposes of testing PageNav
+// [x] for the purposes of testing PageNav
 // import PageNav from '../../common/PageNav';
 
 function RenderLandingPage(props) {
@@ -73,7 +73,6 @@ function RenderLandingPage(props) {
           <Button
             type="default"
             style={{ backgroundColor: '#404C4A', color: '#FFFFFF' }}
-            // [ ] change this to download: onClick={() => history.push('/graphs')}
           >
             Download the Data
           </Button>
@@ -97,7 +96,7 @@ function RenderLandingPage(props) {
         </div>
       </div>
       <div>
-        {/* [ ] Bottom Section: Add code here for the stats section for your first ticket */}
+        {/* [x] Bottom Section: Add code here for the stats section for your first ticket */}
         <div className="bottom-section">
           <h2>Systemic Disparity Insights</h2>
           <div className="stats-container">
@@ -129,7 +128,6 @@ function RenderLandingPage(props) {
             <Button
               type="default"
               style={{ backgroundColor: '#404C4A', color: '#FFFFFF' }}
-              // [ ] change this to go to a page w/ more data info: onClick={() => history.push('/graphs')}
             >
               Read More
             </Button>
