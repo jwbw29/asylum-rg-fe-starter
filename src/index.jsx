@@ -47,15 +47,16 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// const PrivateRoute = ({ children }) => {
-//   const { isAuthenticated } = useAuth0();
-
-//   return isAuthenticated ? children : null;
-// };
-
 export function App() {
   const { Footer, Header } = Layout;
   const { isLoading, error } = useAuth0();
+
+  // FIXME Maybe delete this
+  // const PrivateRoute = ({ children }) => {
+  // const { isAuthenticated } = useAuth0();
+
+  //   return isAuthenticated ? children : null;
+  // };
 
   return (
     <Layout>
@@ -74,7 +75,7 @@ export function App() {
       {!error && !isLoading && (
         <Switch>
           <Route path="/" exact component={LandingPage} />
-          {/* <PrivateRoute> */}{' '}
+          {/* <PrivateRoute> //FIXME Maybe delete these*/}{' '}
           <Route path="/graphs" component={GraphsContainer} />
           {/* </PrivateRoute> */}
           {/* <PrivateRoute> */}{' '}
