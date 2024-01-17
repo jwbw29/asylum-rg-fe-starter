@@ -4,8 +4,9 @@ import '../../../styles/ProfilePage.less';
 
 const ProfilePage = () => {
   const { user, isAuthenticated } = useAuth0();
-  const rawDate = user.updated_at;
 
+  //TODO talk about this
+  const rawDate = user.updated_at;
   const formattedDate = new Date(rawDate).toLocaleDateString('en-US', {
     month: 'short',
     day: 'numeric',
@@ -17,12 +18,11 @@ const ProfilePage = () => {
   });
 
   return (
+    //TODO talk about this
     isAuthenticated && (
       <div className="section-container">
         <div className="content-container">
-          {/* <div className="profile-photo"> */}{' '}
           {user?.picture && <img src={user.picture} alt={user?.name} />}
-          {/* </div> */}
           <h2>{user?.name}</h2>
           <div className="user-info-container">
             <div className="user-info">
@@ -45,6 +45,8 @@ const ProfilePage = () => {
 };
 
 export default ProfilePage;
+
+//TODO Show this as another option if we are supposed to show ALL data
 
 // user object
 //  {

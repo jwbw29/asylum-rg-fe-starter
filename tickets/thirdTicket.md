@@ -10,6 +10,8 @@ To begin work on this ticket, make sure you have finished:
 
 Deliver the following:
 
+//TODO FIRST: talk about the deliverables
+
 - [x] Integrate the Auth0 microservice into the project.
 - [x] Establish a `Profile Page` that only appears on the navigation menu if a user is logged in.
 - [x] The `Profile Page` should display some basic info on the logged in user.
@@ -40,7 +42,7 @@ You must:
 
 2. [x] Do not use a Node version higher than 16.16.0. If you are, you can use `nvm` (for Mac) or `nvm-windows` to easily toggle your node versions in directories.
 
-3. [ ] Make this project your own, but keep the integrity of the main files so that the app can render and work when you wish to present it.
+3. [x] Make this project your own, but keep the integrity of the main files so that the app can render and work when you wish to present it.
 
 ## Deliverables
 
