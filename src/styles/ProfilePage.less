@@ -25,6 +25,7 @@
   border-radius: 10px;
   padding: 10px 20px 10px 20px;
   height: 650px;
+  width: 525px;
 }
 
 .content-container img {
@@ -41,20 +42,26 @@
   margin-bottom: 20px;
 }
 
+.user-info-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .user-info {
   display: flex;
-  justify-content: end;
+  font-size: 1.3rem;
+  color: @main-color;
+  margin-bottom: 10px;
 }
 
 .obj-key {
-  font-size: 1.5rem;
+  font-weight: 600;
   color: @main-color;
   margin-bottom: 10px;
-  margin-right: 10px; /* Add margin to the right */
+  margin-right: 5px;
 }
 
 .user-value {
-  font-size: 1.5rem;
   font-weight: 200;
   color: @secondary-color;
   margin-bottom: 10px;
