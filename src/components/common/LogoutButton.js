@@ -1,21 +1,11 @@
-// src/components/LogoutButton.js
-
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 
+//TODO Might need to replicate this for logout button and profile or anything that is hidden behind authentication
+
 const LogoutButton = () => {
-  const { logout } = useAuth0();
-  return (
-    <button
-      onClick={() =>
-        logout({
-          returnTo: window.location.origin, //TODO: change this to the home page
-        })
-      }
-    >
-      Log Out
-    </button>
-  );
+  const { logout, isAuthenticated } = useAuth0();
+  return isAuthenticated && <button onClick={() => logout()}>Log Out</button>;
 };
 
 export default LogoutButton;

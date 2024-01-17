@@ -3,8 +3,8 @@ import { Image } from 'antd';
 import { Link } from 'react-router-dom';
 import Logo from '../../styles/Images/WhiteLogo.png';
 import { colors } from '../../styles/data_vis_colors';
-// import AuthNav from '../auth-nav';
-import AuthenticationButton from '../common/AuthenticationButton';
+import LoginButton from '../common/LoginButton';
+import LogoutButton from '../common/LogoutButton';
 
 const { primary_accent_color } = colors;
 
@@ -33,9 +33,8 @@ function HeaderContent() {
         <Link to="/profile" style={{ color: '#E2F0F7', paddingRight: '75px' }}>
           Profile
         </Link>
-        <Link to="/login" style={{ color: '#E2F0F7' }}>
-          <AuthenticationButton />
-        </Link>
+        <LoginButton />
+        <LogoutButton />
       </div>
     </div>
   );

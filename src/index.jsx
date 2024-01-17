@@ -23,7 +23,6 @@ import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import reducer from './state/reducers';
 import { colors } from './styles/data_vis_colors';
-import LoginPage from './components/pages/Login/LoginPage';
 import ProfilePage from './components/pages/Profile/ProfilePage';
 
 const { primary_accent_color } = colors;
@@ -66,7 +65,6 @@ export function App() {
         <Route path="/" exact component={LandingPage} />
         <Route path="/graphs" component={GraphsContainer} />
         <Route path="/profile" component={ProfilePage} />
-        <Route path="/login" component={LoginPage} />
         <Route component={NotFoundPage} />
       </Switch>
       <Footer

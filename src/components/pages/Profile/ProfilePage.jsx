@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LoginPage = () => {
+const ProfilePage = () => {
   return (
     <div>
       {' '}
@@ -20,4 +20,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default ProfilePage;
