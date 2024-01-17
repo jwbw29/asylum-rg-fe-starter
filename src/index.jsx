@@ -32,11 +32,11 @@ const store = configureStore({ reducer: reducer });
 ReactDOM.render(
   <Router>
     <Provider store={store}>
-      <React.StrictMode>
-        <Auth0ProviderWithHistory>
+      <Auth0ProviderWithHistory>
+        <React.StrictMode>
           <App />
-        </Auth0ProviderWithHistory>{' '}
-      </React.StrictMode>
+        </React.StrictMode>{' '}
+      </Auth0ProviderWithHistory>{' '}
     </Provider>
   </Router>,
   document.getElementById('root')
