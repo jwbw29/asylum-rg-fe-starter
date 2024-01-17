@@ -22,8 +22,10 @@ import { colors } from './styles/data_vis_colors';
 import ProfilePage from './components/pages/Profile/ProfilePage';
 
 const { primary_accent_color } = colors;
-const domain = process.env.REACT_APP_AUTH0_DOMAIN; //TODO talk about this and the next line, then go to line 32
-const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
+const domain =
+  process.env.REACT_APP_AUTH0_DOMAIN || 'dev-edet26qnl0r7r40m.us.auth0.com'; //TODO talk about this and the next line, then go to line 32
+const clientId =
+  process.env.REACT_APP_AUTH0_CLIENT_ID || 'wST5BRGkuJ6U1mHMwlWvFwi4SFEjX3D9';
 
 const store = configureStore({ reducer: reducer });
 ReactDOM.render(
