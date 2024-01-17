@@ -6,7 +6,7 @@ import {
   // useHistory,
   Switch,
 } from 'react-router-dom';
-import { Auth0Provider } from '@auth0/auth0-react';
+import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
 
 import 'antd/dist/antd.less';
 import { NotFoundPage } from './components/pages/NotFound';
@@ -47,8 +47,16 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+// const PrivateRoute = ({ children }) => {
+//   const { isAuthenticated } = useAuth0();
+
+//   return isAuthenticated ? children : null;
+// };
+
 export function App() {
   const { Footer, Header } = Layout;
+  const { isLoading, error } = useAuth0();
+
   return (
     <Layout>
       <Header
@@ -61,12 +69,20 @@ export function App() {
       >
         <HeaderContent />
       </Header>
-      <Switch>
-        <Route path="/" exact component={LandingPage} />
-        <Route path="/graphs" component={GraphsContainer} />
-        <Route path="/profile" component={ProfilePage} />
-        <Route component={NotFoundPage} />
-      </Switch>
+      {error && <div>Oops... {error.message}</div>}
+      {!error && isLoading && <div>Loading...</div>}
+      {!error && !isLoading && (
+        <Switch>
+          <Route path="/" exact component={LandingPage} />
+          {/* <PrivateRoute> */}{' '}
+          <Route path="/graphs" component={GraphsContainer} />
+          {/* </PrivateRoute> */}
+          {/* <PrivateRoute> */}{' '}
+          <Route path="/profile" component={ProfilePage} />
+          {/* </PrivateRoute> */}
+          <Route component={NotFoundPage} />
+        </Switch>
+      )}
       <Footer
         style={{
           backgroundColor: primary_accent_color,
