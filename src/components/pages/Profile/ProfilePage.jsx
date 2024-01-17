@@ -25,8 +25,6 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 
-//TODO Might need to replicate this for logout button and profile or anything that is hidden behind authentication
-
 const ProfilePage = () => {
   const { user, isAuthenticated } = useAuth0();
   return (

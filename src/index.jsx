@@ -52,13 +52,6 @@ export function App() {
   const { Footer, Header } = Layout;
   const { isLoading, error } = useAuth0();
 
-  // FIXME Maybe delete this
-  // const PrivateRoute = ({ children }) => {
-  // const { isAuthenticated } = useAuth0();
-
-  //   return isAuthenticated ? children : null;
-  // };
-
   return (
     <Layout>
       <Header
@@ -76,12 +69,8 @@ export function App() {
       {!error && !isLoading && (
         <Switch>
           <Route path="/" exact component={LandingPage} />
-          {/* <PrivateRoute> //FIXME Maybe delete these*/}{' '}
           <Route path="/graphs" component={GraphsContainer} />
-          {/* </PrivateRoute> */}
-          {/* <PrivateRoute> */}{' '}
           <Route path="/profile" component={ProfilePage} />
-          {/* </PrivateRoute> */}
           <Route component={NotFoundPage} />
         </Switch>
       )}

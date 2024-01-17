@@ -1,3 +1,4 @@
 {
-  "editor.semanticTokenColorCustomizations": {}
+  "editor.semanticTokenColorCustomizations": {},
+  "todo-tree.tree.scanMode": "workspace only"
 }
