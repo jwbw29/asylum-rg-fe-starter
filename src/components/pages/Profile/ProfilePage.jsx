@@ -5,7 +5,6 @@ import '../../../styles/ProfilePage.less';
 const ProfilePage = () => {
   const { user, isAuthenticated } = useAuth0();
 
-  //TODO talk about this
   const rawDate = user.updated_at;
   const formattedDate = new Date(rawDate).toLocaleDateString('en-US', {
     month: 'short',
@@ -18,7 +17,7 @@ const ProfilePage = () => {
   });
 
   return (
-    //TODO talk about this
+    //FIXME add this to graphs too so users can't go directly to /graphs
     isAuthenticated && (
       <div className="section-container">
         <div className="content-container">
@@ -45,8 +44,6 @@ const ProfilePage = () => {
 };
 
 export default ProfilePage;
-
-//TODO Show this as another option if we are supposed to show ALL data
 
 // user object
 //  {

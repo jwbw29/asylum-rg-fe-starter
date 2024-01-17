@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Auth0Provider, useAuth0 } from '@auth0/auth0-react'; //TODO START HERE: talk about this then go to line 25
+import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
 
 import 'antd/dist/antd.less';
 import { NotFoundPage } from './components/pages/NotFound';
@@ -23,7 +23,7 @@ import ProfilePage from './components/pages/Profile/ProfilePage';
 
 const { primary_accent_color } = colors;
 const domain =
-  process.env.REACT_APP_AUTH0_DOMAIN || 'dev-edet26qnl0r7r40m.us.auth0.com'; //TODO talk about this and the next line, then go to line 32
+  process.env.REACT_APP_AUTH0_DOMAIN || 'dev-edet26qnl0r7r40m.us.auth0.com';
 const clientId =
   process.env.REACT_APP_AUTH0_CLIENT_ID || 'wST5BRGkuJ6U1mHMwlWvFwi4SFEjX3D9';
 
@@ -31,7 +31,6 @@ const store = configureStore({ reducer: reducer });
 ReactDOM.render(
   <Router>
     <Provider store={store}>
-      {/* TODO talk about this, then go to line 49 */}
       <Auth0Provider
         domain={domain}
         clientId={clientId}
@@ -48,7 +47,7 @@ ReactDOM.render(
 
 export function App() {
   const { Footer, Header } = Layout;
-  const { isLoading, error } = useAuth0(); //TODO talk about this then line 63
+  const { isLoading, error } = useAuth0();
 
   return (
     <Layout>
@@ -62,7 +61,6 @@ export function App() {
       >
         <HeaderContent />
       </Header>
-      {/*//TODO talk about these then show the Loading spinner by refreshing, then go to Header.jsx */}
       {error && <div>Oops... {error.message}</div>}{' '}
       {!error && isLoading && <LoadingPage />}
       {!error && !isLoading && (

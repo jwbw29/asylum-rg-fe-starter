@@ -10,7 +10,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 const { primary_accent_color } = colors;
 
 function HeaderContent() {
-  const { isAuthenticated } = useAuth0(); //TODO this
+  const { isAuthenticated } = useAuth0();
   return (
     <div
       style={{
@@ -29,7 +29,6 @@ function HeaderContent() {
         <Link to="/" style={{ color: '#E2F0F7', paddingRight: '75px' }}>
           Home
         </Link>
-        {/*TODO show how we are hiding Graph and Profile and dynamic Login/Logout button */}
         {isAuthenticated && (
           <Link to="/graphs" style={{ color: '#E2F0F7', paddingRight: '75px' }}>
             Graphs

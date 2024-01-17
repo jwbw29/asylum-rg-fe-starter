@@ -10,8 +10,6 @@ To begin work on this ticket, make sure you have finished:
 
 Deliver the following:
 
-//TODO FIRST: talk about the deliverables
-
 - [x] Integrate the Auth0 microservice into the project.
 - [x] Establish a `Profile Page` that only appears on the navigation menu if a user is logged in.
 - [x] The `Profile Page` should display some basic info on the logged in user.
@@ -48,5 +46,5 @@ You must:
 
 Submit the following in your course:
 
-- [ ] Link to your forked repo with the code for the new profile page and auth integration
-- [ ] Link to a Loom video answering the prompt in the `Submit Your Deliverables` assignment in your course
+- [x] Link to your forked repo with the code for the new profile page and auth integration
+- [x] Link to a Loom video answering the prompt in the `Submit Your Deliverables` assignment in your course
