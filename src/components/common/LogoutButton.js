@@ -1,20 +1,18 @@
-// src/components/LogoutButton.js
-
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
+import { Link } from 'react-router-dom';
 
 const LogoutButton = () => {
-  const { logout } = useAuth0();
+  const { logout, isAuthenticated } = useAuth0();
   return (
-    <button
-      onClick={() =>
-        logout({
-          returnTo: window.location.origin, //TODO: change this to the home page
-        })
-      }
-    >
-      Log Out
-    </button>
+    isAuthenticated && (
+      <Link
+        style={{ color: '#E2F0F7', paddingRight: '75px' }}
+        onClick={() => logout()}
+      >
+        Log Out
+      </Link>
+    )
   );
 };
 

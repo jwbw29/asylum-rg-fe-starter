@@ -1,16 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {
-  BrowserRouter as Router,
-  Route,
-  // useHistory,
-  Switch,
-} from 'react-router-dom';
-import Auth0ProviderWithHistory from './auth/auth0-provider-with-history';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Auth0Provider, useAuth0 } from '@auth0/auth0-react'; //TODO START HERE: talk about this then go to line 25
 
 import 'antd/dist/antd.less';
 import { NotFoundPage } from './components/pages/NotFound';
 import { LandingPage } from './components/pages/Landing';
+import LoadingPage from './components/common/LoadingPage';
 
 import { FooterContent, SubFooter } from './components/Layout/Footer';
 import { HeaderContent } from './components/Layout/Header';
@@ -23,20 +19,26 @@ import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import reducer from './state/reducers';
 import { colors } from './styles/data_vis_colors';
-import LoginPage from './components/pages/Login/LoginPage';
 import ProfilePage from './components/pages/Profile/ProfilePage';
 
 const { primary_accent_color } = colors;
+const domain = process.env.REACT_APP_AUTH0_DOMAIN; //TODO talk about this and the next line, then go to line 32
+const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
 
 const store = configureStore({ reducer: reducer });
 ReactDOM.render(
   <Router>
     <Provider store={store}>
-      <Auth0ProviderWithHistory>
+      {/* TODO talk about this, then go to line 49 */}
+      <Auth0Provider
+        domain={domain}
+        clientId={clientId}
+        redirectUri={window.location.origin}
+      >
         <React.StrictMode>
           <App />
         </React.StrictMode>{' '}
-      </Auth0ProviderWithHistory>{' '}
+      </Auth0Provider>{' '}
     </Provider>
   </Router>,
   document.getElementById('root')
@@ -44,6 +46,8 @@ ReactDOM.render(
 
 export function App() {
   const { Footer, Header } = Layout;
+  const { isLoading, error } = useAuth0(); //TODO talk about this then line 63
+
   return (
     <Layout>
       <Header
@@ -56,13 +60,17 @@ export function App() {
       >
         <HeaderContent />
       </Header>
-      <Switch>
-        <Route path="/" exact component={LandingPage} />
-        <Route path="/graphs" component={GraphsContainer} />
-        <Route path="/profile" component={ProfilePage} />
-        <Route path="/login" component={LoginPage} />
-        <Route component={NotFoundPage} />
-      </Switch>
+      {/*//TODO talk about these then show the Loading spinner by refreshing, then go to Header.jsx */}
+      {error && <div>Oops... {error.message}</div>}{' '}
+      {!error && isLoading && <LoadingPage />}
+      {!error && !isLoading && (
+        <Switch>
+          <Route path="/" exact component={LandingPage} />
+          <Route path="/graphs" component={GraphsContainer} />
+          <Route path="/profile" component={ProfilePage} />
+          <Route component={NotFoundPage} />
+        </Switch>
+      )}
       <Footer
         style={{
           backgroundColor: primary_accent_color,

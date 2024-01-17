@@ -34,7 +34,6 @@ function dataReducer(state = initialState, action) {
       };
     }
     case GET_MOCK_FILTERED_DATA: {
-      // [ ] Possibly remove this
       return {
         ...state,
         cases: action.payload,
