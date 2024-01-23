@@ -27,8 +27,9 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.26.1",
     "plotly.js": "^1.54.6",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "next": "14.1.0",
     "react-plotly.js": "^2.4.0",
     "react-redux": "^8.0.2",
     "react-router": "^6.21.2",
@@ -51,7 +52,16 @@
     "lint-staged": "^10.2.11",
     "prettier-eslint-cli": "^5.0.0",
     "prompts": "^2.3.2",
-    "yaml": "^1.10.0"
+    "yaml": "^1.10.0",
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -79,14 +89,15 @@
   "private": false,
   "repository": "github:Lambda-School-Labs/labs-spa-starter",
   "scripts": {
-    "build": "craco --max_old_space_size=4096 build",
     "coverage": "npm test -- --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "format": "prettier --write 'src/**/*.{js,jsx,css,scss}'",
-    "lint": "eslint 'src/**/*.{js,jsx}'",
     "prettier": "prettier --write \"**/*.+(js|jsx|json|css|md)\"",
-    "start": "node start.js",
-    "test": "craco test --env=jest-environment-jsdom-sixteen"
+    "test": "craco test --env=jest-environment-jsdom-sixteen",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "version": "0.1.0"
 }
